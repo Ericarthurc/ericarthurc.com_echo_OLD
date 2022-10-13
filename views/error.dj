@@ -1,0 +1,17 @@
+{% extends "layouts/master.dj" %}
+
+{% block title %}{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+  {% include "includes/header_logo.dj" %}
+  {% include "includes/navbar.dj" %}
+  <div class="main-container">
+    <div class="error-container">
+      <div class="error-code">{{ code }}</div>
+      <div class="error-uri"><p>Path: {{ path }}</p></div>
+      <div class="error-error"><p>Error: {{ error }}</p></div>
+    </div
+  </div>
+{% endblock %}

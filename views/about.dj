@@ -1,0 +1,8 @@
+{% extends "layouts/master.dj" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+  {% include "includes/header_logo.dj" %}
+  {% include "includes/navbar.dj" %}
+{% endblock %}

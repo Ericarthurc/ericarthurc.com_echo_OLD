@@ -1,0 +1,19 @@
+{% extends "layouts/master.dj" %}
+
+{% block title %}{% endblock %}
+
+{% block head %}
+  <script src="/public/js/highlight.min.js"></script>
+{% endblock %}
+
+{% block content %}
+  {% include "includes/header_logo.dj" %}
+  {% include "includes/navbar.dj" %}
+  <div class="blog-container">
+    {{markdown|safe}}
+    <p class="tags">Tags: {% for tag in meta.Tags %} `{{ tag }}` {% endfor %}</p>
+  </div>
+  <script>
+    hljs.highlightAll();
+  </script>
+{% endblock %}

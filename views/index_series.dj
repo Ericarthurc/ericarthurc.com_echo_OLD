@@ -1,0 +1,23 @@
+{% extends "layouts/master.dj" %}
+
+{% block title %}{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+  {% include "includes/header_logo.dj" %}
+  {% include "includes/navbar.dj" %}
+  <div class="main-container">
+    <div class="post-list">
+      {% for series in seriesList %}
+      <div class="post-container">
+        <a class="post-dynamic-{{series}} post-anchor-alt" href="/series/{{series}}">
+          <div class="post-info">
+            <span class="post-info-title"> {{ series }} </span>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layouts/master.dj" %}
+
+{% block title %}{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+  {% include "includes/header_logo.dj" %}
+  {% include "includes/navbar.dj" %}
+  <div class="main-container">
+    <h1 class="main-header">{{category}}</h1>
+    <div class="post-list">
+      {% for category in categoryList %}
+      <div class="post-container">
+        <a class="post-dynamic-{{category.Series}} post-anchor" href="/blog/{{category.FileName}}">
+          <div class="post-info">
+            <span class="post-info-title"> {{ category.Title }} </span>
+            <span class="post-info-date"> {{ category.Date }} </span>
+          </div>
+        </a>
+        <div class="post-tags">
+          {% for tag in category.Tags %}
+          <a class="post-tags-anchor" href="/category/{{tag}}">
+            <span class="post-tags-span">{{ tag }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

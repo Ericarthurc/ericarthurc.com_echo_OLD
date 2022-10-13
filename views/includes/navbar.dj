@@ -1,0 +1,5 @@
+<nav class="navbar" id="navbar">
+  <a class="navbar-link{% if url == '/' %} active{% endif %}" href="/">BLOG</a>
+  <a class="navbar-link{% if url == '/series' %} active{% endif %}" href="/series">SERIES</a>
+  <a class="navbar-link{% if url == '/about' %} active{% endif %}" href="/about">ABOUT ME</a>
+</nav>
