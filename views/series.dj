@@ -12,7 +12,7 @@
     <div class="post-list">
       {% for series in seriesList %}
       <div class="post-container">
-        <a class="post-dynamic-{{series}} post-anchor" href="/blog/{{series.FileName}}">
+        <a class="post-anchor" href="/blog/{{series.FileName}}">
           <div class="post-info">
             <span class="post-info-title"> {{ series.Title }} </span>
             <span class="post-info-date"> {{ series.Date }} </span>

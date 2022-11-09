@@ -1,13 +1,13 @@
 :root {
   --html-color: #e4f0fc;
   --background-color: #0d1017;
-  --navbar-background: #d299c9;
   --navbar-link-color: #e4f0fc;
-  --navbar-link-hover-color: #7c4af0ee;
+  --navbar-link-hover-color: #0051ffee;
   --main-header-color: #ff2ea4;
 
-  --post-anchor-background: #4a0fd6;
-  --post-anchor-hover-background: #4a0fd6b7;
+  --post-anchor-background: #0051ff27;
+  --post-anchor-border-color: #0051ff;
+  --post-anchor-hover-background: #0051ff93;
   --post-info-title-color: #e4f0fc;
   --post-info-date-color: #e4f0fc;
 
@@ -39,11 +39,11 @@
 [data-theme='light'] {
   --html-color: #1d0e0e;
   --background-color: #e4e4e4;
-  --navbar-background: #18181b;
   --navbar-link-color: #262627;
-  --navbar-link-hover-color: #ff2ea4ee;
-  --post-anchor-background: #4a0fd6;
-  --post-anchor-hover-background: #4a0fd6b7;
+
+  --post-anchor-background: #0051ff8e;
+  --post-anchor-border-color: #00000000;
+  --post-anchor-hover-background: #0051ff;
   --post-info-title-color: #e4f0fc;
   --post-info-date-color: #e4f0fc;
 
@@ -84,7 +84,6 @@ body {
   margin-top: 20px;
   margin-bottom: 15px;
   gap: 15px;
-  align-items: top;
   justify-content: center;
 }
 
@@ -105,7 +104,7 @@ body {
 
 .navbar-link.active {
   /* position: relative; */
-  border-bottom: 2px solid #ff2ea4;
+  border-bottom: 2px solid #0051ff;
 }
 
 .navbar-link:hover {
@@ -136,7 +135,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ff2ea4;
+  background-color: #0051ff;
   border-radius: 34px;
 }
 
@@ -159,7 +158,7 @@ body {
 }
 
 .theme-switcher-container-input:checked+.theme-switcher-container-span::before {
-  background-color: #ff2ea4;
+  background-color: #0051ff;
 }
 
 .theme-switcher-container-input:checked+.theme-switcher-container-span {
@@ -216,6 +215,7 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--post-anchor-background);
+  border: var(--post-anchor-border-color) 1px solid;
   border-radius: 0.5rem;
   width: 220px;
   min-height: 40px;
@@ -235,11 +235,6 @@ body {
   text-align: center;
   box-shadow: rgb(0 0 0/ 15%) 0px 5px 10px 0px;
   justify-content: center;
-}
-
-/* Dynamic post colors based on special series */
-.post-dynamic-games {
-  background: #61aeee;
 }
 
 :where(.post-anchor, .post-anchor-alt):hover {

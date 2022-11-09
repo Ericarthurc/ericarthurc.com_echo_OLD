@@ -6,4 +6,4 @@
 - Django
 - Goldmark
 
-##### Version: `1.0.0` [in beta] [ui 1.0]
+##### Version: `1.5.0` [in beta] [ui 1.1]
